@@ -13,6 +13,7 @@ import {ContactPage} from "../../pages/contact/ContactPage";
 import {auth, createUserProfileDocument} from "../../firebase/firebase.utils";
 import {connect} from 'react-redux';
 import {setCurrentUser} from "../../redux/user/userActions";
+import {createStructuredSelector} from "reselect";
 
 class App extends Component {
 
@@ -65,8 +66,8 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = ({user}) => ({
-    currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+    currentUser: setCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
