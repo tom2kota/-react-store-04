@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
-import {Homepage} from "../../pages/homepage/Homepage";
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Homepage} from "../../pages/home/Homepage";
 import {CategoryOne} from "../categories/CategoryOne";
 import {CategoryTwo} from "../categories/CategoryTwo";
 import {CategoryThree} from "../categories/CategoryThree";
@@ -14,6 +14,7 @@ import {auth, createUserProfileDocument} from "../../firebase/firebase.utils";
 import {connect} from 'react-redux';
 import {setCurrentUser} from "../../redux/user/userActions";
 import {createStructuredSelector} from "reselect";
+import CheckoutPage from "../../pages/checkout/CheckoutPage";
 
 class App extends Component {
 
@@ -53,7 +54,8 @@ class App extends Component {
                         <Route exact path="/" component={Homepage}/>
                         <Route path="/shop" component={ShopPage}/>
                         <Route path="/contact" component={ContactPage}/>
-                        <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/'/>) : <SignInUp/>}/>
+                        <Route exact path="/signin" render={() => <SignInUp/>}/>
+                        <Route exact path="/checkout" component={CheckoutPage}/>
                         <Route path="/category_1" component={CategoryOne}/>
                         <Route path="/category_2" component={CategoryTwo}/>
                         <Route path="/category_3" component={CategoryThree}/>
