@@ -2,12 +2,13 @@ import React from "react";
 import {connect} from "react-redux";
 import {CustomButton} from "../custom-button/CustomButton";
 import {CartItem} from "../cart-item/CartItem";
-import './CartDropdown.scss'
 import {selectCartItems} from "../../redux/cart/cartSelectors";
 import {createStructuredSelector} from "reselect";
 import {withRouter} from "react-router-dom";
+import {toggleCartHidden} from "../../redux/cart/cartActions";
+import './CartDropdown.scss'
 
-const CartDropdown = ({cartItems, history}) => (
+const CartDropdown = ({cartItems, history, dispatch}) => (
     <div className='cart-dropdown'>
         <div className='cart-items'>
             {
@@ -17,7 +18,10 @@ const CartDropdown = ({cartItems, history}) => (
 
             }
         </div>
-        <CustomButton onClick={() => history.push('/checkout')}>Go to checkout</CustomButton>
+        <CustomButton onClick={() => {
+            history.push('/checkout');
+            dispatch(toggleCartHidden())
+        }}>Go to checkout</CustomButton>
     </div>
 )
 
