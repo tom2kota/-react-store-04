@@ -13,7 +13,7 @@
 
   .image-container {
     width: 23%;
-    //padding-right: 15px;
+    padding-right: 15px;
 
     @media screen and (max-width: 800px) {
       width: 22%;
@@ -32,7 +32,7 @@
   }
 
   .quantity {
-    //padding-left: 20px;
+    padding-left: 20px;
 
     display: flex;
 
