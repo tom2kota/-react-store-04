@@ -6,7 +6,7 @@ import {CategoryTwo} from "../categories/CategoryTwo";
 import {CategoryThree} from "../categories/CategoryThree";
 import {CategoryFour} from "../categories/CategoryFour";
 import {CategoryFive} from "../categories/CategoryFive";
-import ShopPage from "../../pages/shop/ShopPage";
+import {ShopPage} from "../../pages/shop/ShopPage";
 import Header from "../header/Header";
 import {SignInUp} from "../../pages/sign-in-up/SignInUp";
 import {ContactPage} from "../../pages/contact/ContactPage";
