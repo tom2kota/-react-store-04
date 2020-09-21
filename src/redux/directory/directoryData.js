@@ -10,31 +10,31 @@ export const INITIAL_STATE = {
             id: 1,
             title: 'category #1',
             image: categoryOneImage,
-            linkUrl: 'category_1'
+            linkUrl: 'shop/product_category_1'
         },
         {
             id: 2,
             title: 'category #2',
             image: categoryTwoImage,
-            linkUrl: 'category_2'
+            linkUrl: 'shop/product_category_2'
         },
         {
             id: 3,
             title: 'category #3',
             image: categoryThreeImage,
-            linkUrl: 'category_3'
+            linkUrl: 'shop/product_category_3'
         },
         {
             id: 4,
             title: 'category #4',
             image: categoryFourImage,
-            linkUrl: 'category_4'
+            linkUrl: 'shop/product_category_4'
         },
         {
             id: 5,
             title: 'category #5',
             image: categoryFiveImage,
-            linkUrl: 'category_5'
+            linkUrl: 'shop/product_category_5'
         },
 
     ]

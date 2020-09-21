@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Homepage} from "../../pages/home/Homepage";
-import {CategoryOne} from "../categories/CategoryOne";
-import {CategoryTwo} from "../categories/CategoryTwo";
-import {CategoryThree} from "../categories/CategoryThree";
-import {CategoryFour} from "../categories/CategoryFour";
-import {CategoryFive} from "../categories/CategoryFive";
 import {ShopPage} from "../../pages/shop/ShopPage";
 import Header from "../header/Header";
 import {SignInUp} from "../../pages/sign-in-up/SignInUp";
@@ -57,11 +52,6 @@ class App extends Component {
                         <Route path="/contact" component={ContactPage}/>
                         <Route exact path="/signin" render={() => <SignInUp/>}/>
                         <Route exact path="/checkout" component={CheckoutPage}/>
-                        <Route path="/category_1" component={CategoryOne}/>
-                        <Route path="/category_2" component={CategoryTwo}/>
-                        <Route path="/category_3" component={CategoryThree}/>
-                        <Route path="/category_4" component={CategoryFour}/>
-                        <Route path="/category_5" component={CategoryFive}/>
                     </Switch>
                 </BrowserRouter>
             </div>
