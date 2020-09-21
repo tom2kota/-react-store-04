@@ -1,16 +1,15 @@
 import React from "react";
 import {connect} from "react-redux";
 import {selectCollection} from "../../redux/shop/shopSelectors";
+import CollectionItem from "../../components/collection-item/CollectionItem";
 import './CollectionPage.scss'
 
-const CollectionPage = ({collection}) => (
+const CollectionPage = ({collection: {title, items}}) => (
     <div className='collection-page'>
-        {console.log('............................')}
-        {/*{console.log(match)}*/}
-        {/*{console.log(match.params.collectionId)}*/}
-        {console.log(collection)}
-        <h2 className='title'>Collection Page</h2>
-        {/*<h3>/ {match.params.collectionId} /</h3>*/}
+        <h2 className='title'>{title}</h2>
+        <div className='items'>
+            {items.map(item => (<CollectionItem key={item.id} item={item}/>))}
+        </div>
     </div>
 )
 

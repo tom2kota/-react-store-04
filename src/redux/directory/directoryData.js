@@ -1,6 +1,6 @@
 import categoryOneImage from "../../images/01.png";
 import categoryTwoImage from "../../images/03.png";
-import categoryThreeImage from "../../images/10.png";
+import categoryThreeImage from "../../images/02.png";
 import categoryFourImage from "../../images/11.png";
 import categoryFiveImage from "../../images/09.png";
 
