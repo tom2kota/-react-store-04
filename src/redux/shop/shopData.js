@@ -4,8 +4,8 @@ import imageProductCategory3 from '../../images/02.png'
 import imageProductCategory4 from '../../images/11.png'
 import imageProductCategory5 from '../../images/09.png'
 
-export const SHOP_DATA = [
-    {
+export const SHOP_DATA = {
+    product_category_1: {
         id: 1,
         title: 'Product Category #1',
         routeName: 'product_category_1',
@@ -42,7 +42,8 @@ export const SHOP_DATA = [
             }
         ]
     },
-    {
+
+    product_category_2: {
         id: 2,
         title: 'Product Category #2',
         routeName: 'product_category_2',
@@ -70,11 +71,10 @@ export const SHOP_DATA = [
                 name: 'Product #2-3',
                 image: imageProductCategory2,
                 price: 30
-            }
-        ]
-    }
-    ,
-    {
+            }]
+    },
+
+    product_category_3: {
         id: 3,
         title: 'Product Category #3',
         routeName: 'product_category_3',
@@ -117,7 +117,8 @@ export const SHOP_DATA = [
             }
         ]
     },
-    {
+
+    product_category_4: {
         id: 4,
         title: 'Product Category #4',
         routeName: 'product_category_4',
@@ -160,7 +161,8 @@ export const SHOP_DATA = [
             }
         ]
     },
-    {
+
+    product_category_5: {
         id: 5,
         title: 'Product Category #5',
         routeName: 'product_category_5',
@@ -203,5 +205,4 @@ export const SHOP_DATA = [
             }
         ]
     }
-
-]
+}
