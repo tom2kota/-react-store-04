@@ -3,7 +3,56 @@
 E-commerce project DEMO:
 - [vercel.app link](https://react-store-04.vercel.app)
 
+---------------
 
+## [Stripe](https://stripe.com)
+
+- Go to [Dashboard](https://dashboard.stripe.com/test/developers)
+- Go to [API Keys](https://dashboard.stripe.com/test/apikeys) => Publishable key
+- Read the [docs](https://github.com/azmenak/react-stripe-checkout)
+- install [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout)
+
+```
+npm i react-stripe-checkout
+```
+- create separate component
+``` 
+import React from "react";
+import StripeCheckout from "react-stripe-checkout";
+import imgLogo from '../../images/logo192.png'
+
+export const StripeCheckoutButton = ({price}) => {
+    const priceForStripe = price * 100;
+    const publicKey = 'pk_test_o2poQ9xWESfUvuH00ETkLW0Xj';
+    const onToken = token => {
+        console.log(token);
+        alert('Payment Successful')
+    }
+    return (
+        <StripeCheckout
+            label='Pay Now'
+            name='React Store'
+            billingAddress
+            shippingAddress
+            image={imgLogo}
+            description={`Your total is $${price}`}
+            amount={priceForStripe}
+            panelLabel='Pay Now'
+            token={onToken}
+            stripeKey={publicKey}
+        />
+    )
+}
+```
+
+- use [Basic test card numbers](https://stripe.com/docs/testing#cards)
+
+``` 
+4242424242424242	Visa	    CVC - Any 3 digits	Date - Any future date
+5555555555554444	Mastercard	CVC - Any 3 digits	Date - Any future date
+```
+
+- check [logs](https://dashboard.stripe.com/test/logs)
 
 ---------------
 
@@ -125,6 +174,7 @@ import {auth, createUserProfileDocument} from "../../firebase/firebase.utils";
 
 ---------------
 
+# P.S.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
