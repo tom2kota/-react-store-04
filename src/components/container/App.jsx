@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Redirect, Route} from 'react-router-dom';
 import {Homepage} from "../../pages/home/Homepage";
 import {ShopPage} from "../../pages/shop/ShopPage";
 import Header from "../header/Header";
@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     render() {
-        console.log('this.props.currentUser: ', this.props.currentUser)
+        console.log('this.props: ', this.props)
         return (
             <div>
                 <BrowserRouter>
